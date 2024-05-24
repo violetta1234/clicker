@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    font-family: "Press Start 2P", system-ui;
+    height: 100vh;
+    
+}
+
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 30px;
+}
+
+h2{
+    font-size: 50px;
+}
+
+h3{
+    font-size: 20px;
+    position: relative;
+    animation-name: running-string;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    /* Линейная, постоянная скорость */
+    animation-timing-function: linear;
+}
+
+/* Создание анимации btn-pulse */
+@keyframes btn-pulse {
+    0%{
+        /* Начало */
+        transform: scale(1);
+    }
+    50%{
+        /* Середина */
+        transform: scale(1.05);
+    }
+    100%{
+        /* Конец */
+        transform: scale(1);
+    }
+}
+
+@keyframes running-string {
+    from{
+        right: -100vw;
+    }
+
+    to{
+        right: 200vw;
+    }
+}
+
+.btn-img img{
+    width: 90vw;
+}
+
+.btn-img{
+    margin-bottom: 16px;
+    /* Имя анимации для элемента */
+    animation-name: btn-pulse;
+    /* Длительность анимации */
+    animation-duration: 1s;
+    /* Количество повторений */
+    animation-iteration-count: infinite;
+}
+
+#autoclick{
+    color: white;
+    width: 80vw;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(51, 130, 225);
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 1px;
+}
